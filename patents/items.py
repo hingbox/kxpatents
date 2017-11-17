@@ -7,8 +7,13 @@
 
 import scrapy
 
-
-class PatentsItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class ZreadingItem(scrapy.Item):
+      # define the fields for your item here like:
+      # name = scrapy.Field()
+      title = scrapy.Field()
+      author = scrapy.Field()
+      pub_date = scrapy.Field()
+      types = scrapy.Field()
+      tags = scrapy.Field()
+      view_count = scrapy.Field()
+      content = scrapy.Field()

@@ -88,3 +88,18 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+
+
+#mysql configuration
+MYSQL_HOST = '127.0.0.1'
+MYSQL_DBNAME = 'patents'        #数据库名字，请修改
+MYSQL_USER = 'root'             #数据库账号，请修改
+MYSQL_PASSWD = 'root'           #数据库密码，请修改
+MYSQL_PORT = 3306               #数据库端口，在dbhelper中使用
+
+#指定pipelines
+ITEM_PIPELINES = {
+    'patents.pipelines.ZreadingPipeline': 300,#保存到mysql数据库
+    #'webCrawler_scrapy.pipelines.JsonWithEncodingPipeline': 300,#保存到文件中
+}
