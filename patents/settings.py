@@ -68,6 +68,12 @@ ROBOTSTXT_OBEY = True
 #    'patents.pipelines.PatentsPipeline': 300,
 #}
 
+
+DOWNLOADER_MIDDLEWARES = {
+    'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware' : None,
+    'patents.middlewares.PatentsSpiderMiddleware' :400
+}
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
